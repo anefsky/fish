@@ -1,5 +1,11 @@
 var Giftcard = Giftcard || {};  // local namespace
 var Controls = Controls || {};  // stops jshint warnings
+var Utils = Utils || {};
+
+window.onload = function() {
+    var app = Giftcard.App.getInstance();
+    app.init();
+};
 
 Giftcard.App = (function() { // Singleton
     var instance; // stores reference to Singleton
@@ -222,17 +228,17 @@ Giftcard.FormData = function() {
     };
     return {
         validate: function() {
+            var elErrorNotice = document.getElementById("errors-on-page-notice");
             _clearAllErrorFlags();
-//            $("#errors-on-page-notice").addClass("no-display");  // todo: fix, should not have dup classes
-            // fix addClass to only add if not exists
+            Utils.Classes.addClass(elErrorNotice, "hidden");            
             var erroneousControls = _createErroneousControlsList();
             for (var i = 0; i < erroneousControls.length; i++) {
                 _flagForError(erroneousControls[i]);
             }
             if (erroneousControls.length > 0) {
-//                $("#errors-on-page-notice").removeClass("no-display");
-                window.scrollTo(0, 0); // go to top of page
+                Utils.Classes.removeClass(elErrorNotice, "hidden");
             }
+            window.scrollTo(0, 0); // go to top of page
         },
         dump: function() {
             var moduleCollections = _getModuleCollections();
@@ -254,8 +260,6 @@ Giftcard.FormData = function() {
         }
     };
 };
-
-//////////// Modules ///////////////////////////////
 
 Giftcard.ModuleCollection = function(elSection, maxSize) {
     var _elRoot = elSection;
@@ -336,7 +340,7 @@ Giftcard.OrderModule = function(elSection, type, itemNumber) {
         brand: function() { // assigns item number throughout module
             var html = _elRoot.innerHTML;
             var replacementText = "items[" + _itemNumber + "]";
-            var re = new RegExp("items" + "\\[" + "\\d" + "\\]", "g");
+            var re = new RegExp("items" + "\\[" + "XXX" + "\\]", "g");
             var brandedHtml = html.replace(re, replacementText);
             _elRoot.innerHTML = brandedHtml;
         },
@@ -382,12 +386,6 @@ Giftcard.OrderModule = function(elSection, type, itemNumber) {
     };
 };
 
-//////////// endModules ///////////////////////////////
-
-window.onload = function() {
-    var app = Giftcard.App.getInstance();
-    app.init();
-};
 
 
 

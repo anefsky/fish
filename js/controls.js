@@ -1,4 +1,5 @@
 var Controls = Controls || {};  // namespace
+var Utils = Utils || {};
 
 Controls.BaseCtl = function() { // abstract
     this.getValue = function() {
@@ -17,11 +18,13 @@ Controls.BaseCtl = function() { // abstract
     this.postProcess = function() {
     };
     this.addClassTo = function(className) { 
-        this.elCtlAnchor.className = this.elCtlAnchor.className + " " + className;
+//        this.elCtlAnchor.className = this.elCtlAnchor.className + " " + className;
+        Utils.Classes.addClass(this.elCtlAnchor, className);
     };
     this.removeClassFrom = function(className) { 
-        this.elCtlAnchor.className = 
-                this.elCtlAnchor.className.replace( /(?:^|\s)className(?!\S)/ , '' );
+//        this.elCtlAnchor.className = 
+//                this.elCtlAnchor.className.replace( /(?:^|\s)className(?!\S)/ , '' );
+        Utils.Classes.removeClass(this.elCtlAnchor, className);
     };
     this.isValid = function() {
         return !(this.isRequired() && this.getValue() === "");

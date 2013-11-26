@@ -5,6 +5,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/site.css">
 
+        <script src="js/utils.js"></script>
         <script src="js/controls.js"></script>
         <script src="js/giftcard.js"></script>
 
@@ -15,7 +16,8 @@
             <img id="main-page-img">
         </div>
 
-        <div id="errors-on-page-notice" hidden>See errors below</div>
+        <div id="errors-on-page-notice" class="hidden">Please fix highlighted errors below</div>
+
         <div id="section-order-mail">
 
             <fieldset class="add-more-group">
@@ -26,17 +28,17 @@
                 </div>
 
                 <div class="amt-control-cntnr control">
-                    <select class="amt-control"></select>
+                    <select class="amt-control" required name="items[XXX].amount"></select>
                 </div>
 
                 <div class="name-to-control-cntnr control">
                     <div class="label">To (optional):</div>
-                    <input class="text-input" name="items[0].name-to" ></input>
+                    <input class="text-input" name="items[XXX].name-to" ></input>
                 </div>
 
                 <div class="name-from-control-cntnr control">
                     <div class="label">From (optional):</div>
-                    <input class="text-input" name="items[0].name-from" ></input>
+                    <input class="text-input" name="items[XXX].name-from" ></input>
                 </div>
 
             </fieldset>
@@ -54,46 +56,43 @@
                 </div>
 
                 <div class="amt-control-cntnr control">
-                    <select class="amt-control"></select>
+                    <select class="amt-control" required name="items[XXX].amount"></select>
                 </div>
 
                 <div class="name-to-control-cntnr control">
                     <div class="label">To:</div>
-                    <input class="text-input" name="items[0].name-to" required></input>
+                    <input class="text-input" name="items[XXX].name-to" required></input>
                 </div>
 
                 <div class="name-from-control-cntnr control">
                     <div class="label">From:</div>
-                    <input class="text-input" name="items[0].name-from" required></input>
+                    <input class="text-input" name="items[XXX].name-from" required></input>
                 </div>
 
 
                 <div class="email-to-control-cntnr control">
                     <div class="label">Recipient's Email Address:</div>
-                    <input class="text-input" name="items[0].email-to" required></input>
+                    <input class="text-input" name="items[XXX].email-to" required></input>
                 </div>
 
                 <div class="email-confirm-control-cntnr control">
                     <div class="label">Confirm Email Address:</div>
-                    <input class="text-input" name="items[0].email-cfm" required></input>
+                    <input class="text-input" name="items[XXX].email-cfm" required></input>
                 </div>
-
-
-
 
                 <div class="date_controls">
                     <div class="label">Date to Send:</div>
                     <div class="month-control-cntnr control">
-                        <select class="selector"></select>
+                        <select class="selector" name="items[XXX].month"></select>
                     </div>
                     <div class="day-control-cntnr">
-                        <select class="selector"></select>
+                        <select class="selector" name="items[XXX].day"></select>
                     </div>
                 </div>
 
                 <div class="message-with-countdown-cntnr control">
                     <label>Message (Optional):</label>
-                    <textarea class="" maxlength="250"></textarea>
+                    <textarea class="" maxlength="250"  name="items[XXX].msg"></textarea>
                     <div><span>250</span> Characters Remaining</div>
                 </div>
 
