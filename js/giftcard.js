@@ -12,10 +12,10 @@ Giftcard.App = (function() { // Singleton
     function init() { // runs on creation
         // Private methods and variables
 
-        console.log(VS.data.monthDays);
+        console.log(AJN.data.monthDays);
 
         var _cfgParams = {
-            "send_date_range": VS.data.monthDays, //ex: [[25, 31], [1, 30], [1, 31]];
+            "send_date_range": AJN.data.monthDays, //ex: [[25, 31], [1, 30], [1, 31]];
             "max_orders_per_type": 3
         },
         _properties = {},
@@ -124,15 +124,15 @@ Giftcard.ModuleTypeProperties = function() {
         "mail": {//todo: make primary/secondary
             "section_id": "section-order-mail",
             "collection_name": "MAIL_MODULE_COLLECTION",
-            "data_amounts": VS.data.dollarAmountsMail,
-            "data_designs": VS.data.designChoicesMail,
+            "data_amounts": AJN.data.dollarAmountsMail,
+            "data_designs": AJN.data.designChoicesMail,
             "add_more_button_id": "add-more-at-a-time-mail"
         },
         "email": {
             "section_id": "section-order-email",
             "collection_name": "EMAIL_MODULE_COLLECTION",
-            "data_amounts": VS.data.dollarAmountsEmail,
-            "data_designs": VS.data.designChoicesEmail,
+            "data_amounts": AJN.data.dollarAmountsEmail,
+            "data_designs": AJN.data.designChoicesEmail,
             "add_more_button_id": "add-more-at-a-time-email"
         }
     };
