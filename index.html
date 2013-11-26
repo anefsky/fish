@@ -25,7 +25,6 @@
                     <span class="design-options"></span>
                 </div>
 
-
                 <div class="amt-control-cntnr control">
                     <select class="amt-control"></select>
                 </div>
@@ -44,26 +43,56 @@
 
         </div>
 
-        <button id="add-more-at-a-time-mail">add-more-at-a-time-mail</button>
+        <button id="add-more-at-a-time-mail">add-more-at-a-time-fish</button>
 
         <div id="section-order-email">
             <fieldset class="add-more-group">
 
-                <div class="name-to-control-cntnr">
+                <div class="design-control-cntnr control">
+                    <img class="main-image-display">
+                    <span class="design-options"></span>
+                </div>
+
+                <div class="amt-control-cntnr control">
+                    <select class="amt-control"></select>
+                </div>
+
+                <div class="name-to-control-cntnr control">
                     <div class="label">To:</div>
                     <input class="text-input" name="items[0].name-to" required></input>
                 </div>
 
-                <div class="month-control-cntnr">
-                    <select class="selector"></select>
-                </div>
-
-                <div class="day-control-cntnr">
-                    <select class="selector"></select>
+                <div class="name-from-control-cntnr control">
+                    <div class="label">From:</div>
+                    <input class="text-input" name="items[0].name-from" required></input>
                 </div>
 
 
-                <div class="message-with-countdown-cntnr">
+                <div class="email-to-control-cntnr control">
+                    <div class="label">Recipient's Email Address:</div>
+                    <input class="text-input" name="items[0].email-to" required></input>
+                </div>
+
+                <div class="email-confirm-control-cntnr control">
+                    <div class="label">Confirm Email Address:</div>
+                    <input class="text-input" name="items[0].email-cfm" required></input>
+                </div>
+
+
+
+
+                <div class="date_controls">
+                    <div class="label">Date to Send:</div>
+                    <div class="month-control-cntnr control">
+                        <select class="selector"></select>
+                    </div>
+                    <div class="day-control-cntnr">
+                        <select class="selector"></select>
+                    </div>
+                </div>
+
+                <div class="message-with-countdown-cntnr control">
+                    <label>Message (Optional):</label>
                     <textarea class="" maxlength="250"></textarea>
                     <div><span>250</span> Characters Remaining</div>
                 </div>
@@ -71,16 +100,18 @@
             </fieldset>
 
         </div>
-        <button id="add-more-at-a-time-email">add-more-at-a-time-email</button>
+        <button id="add-more-at-a-time-email">add-more-at-a-time-birds</button>
         <button class="add-to-bag">add-to-bag</button>
 
         <script>
             var VS = VS || {};
             VS.data = VS.data || {};
 
-            VS.data.monthDays = [[25, 31], [1, 30], [1, 31]];
+            VS.data.monthDays = [[25, 30], [1, 31], [1, 31]];
 
             VS.data.dollarAmountsMail = [25, 50, 100, 250, 500];
+            
+            VS.data.dollarAmountsEmail = [50, 100, 500, 1000];
 
             VS.data.designChoicesMail = [
                 {
@@ -120,6 +151,28 @@
                     "img_full_url": "images/tall_fish.jpg"
                 },
             ];
+
+            VS.data.designChoicesEmail = [
+                {
+                    "title": "First",
+                    "value": "XXX",
+                    "img_thumb_url": "images/bird_brown.jpg",
+                    "img_full_url": "images/bird_brown.jpg"
+                },
+                {
+                    "title": "First",
+                    "value": "YYY",
+                    "img_thumb_url": "images/bird_duck.jpg",
+                    "img_full_url": "images/bird_duck.jpg"
+                },
+                {
+                    "title": "First",
+                    "value": "ZZZ",
+                    "img_thumb_url": "images/bird_parrot.jpg",
+                    "img_full_url": "images/bird_parrot.jpg"
+                }
+            ];
+
         </script>
 
 

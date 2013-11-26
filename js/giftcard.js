@@ -362,18 +362,18 @@ Giftcard.OrderModule = function(elSection, type, itemNumber) {
             var dayTargetCtl, emailPrimaryCtl;
 
             _arrControls = [
-//                new Controls.DesignSelectorCtl(_getCtlElement("design-control-cntnr"),
-//                        params.data_designs, currentItemNum),
-//                new Controls.AmtCtl(_getCtlElement("amt-control-cntnr"),
-//                        params.data_amounts),
+                new Controls.DesignSelectorCtl(_getCtlElement("design-control-cntnr"),
+                        params.data_designs, currentItemNum),
+                new Controls.AmtCtl(_getCtlElement("amt-control-cntnr"),
+                        params.data_amounts),
                 new Controls.TextInputCtl(_getCtlElement("name-to-control-cntnr")),
-//                new Controls.TextInputCtl(_getCtlElement("name-from-control-cntnr")),
+                new Controls.TextInputCtl(_getCtlElement("name-from-control-cntnr")),
                 new Controls.MessageWithCountdown(_getCtlElement("message-with-countdown-cntnr")),
                 dayTargetCtl = new Controls.DayCtl(_getCtlElement("day-control-cntnr"), vsDateRange),
                 new Controls.MonthCtl(_getCtlElement("month-control-cntnr"), dayTargetCtl, vsDateRange),
-//                emailPrimaryCtl = new Controls.EmailInputCtl(_getCtlElement("email-to-control-cntnr")),
-//                new Controls.EmailConfirmInputCtl(_getCtlElement("email-confirm-control-cntnr"),
-//                        emailPrimaryCtl)
+                emailPrimaryCtl = new Controls.EmailInputCtl(_getCtlElement("email-to-control-cntnr")),
+                new Controls.EmailConfirmInputCtl(_getCtlElement("email-confirm-control-cntnr"),
+                        emailPrimaryCtl)
             ];
         },
         getControls: function() {
