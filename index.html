@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Giftcard</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/site.css">
+        
+        <script src="js/controls.js"></script>
+        <script src="js/giftcard.js"></script>
+
+
+    </head>
+    <body>
+        <img id="main-page-img">
+        <div id="errors-on-page-notice" hidden>See errors below</div>
+        <div id="section-order-mail">
+
+            <fieldset class="add-more-group">
+
+
+
+
+                <div class="design-control-cntnr">
+                    <img class="main-image-display">
+                    <span class="design-options"></span>
+                </div>
+
+
+                <div class="amt-control-cntnr">
+                    <select class="amt-control"></select>
+                </div>
+
+                <div class="name-to-control-cntnr">
+                    <div class="label">To (optional):</div>
+                    <input class="text-input" name="items[0].name-to" ></input>
+                </div>
+
+                <div class="name-from-control-cntnr">
+                    <div class="label">From (optional):</div>
+                    <input class="text-input" name="items[0].name-from" ></input>
+                </div>
+
+            </fieldset>
+
+        </div>
+
+        <button id="add-more-at-a-time-mail">add-more-at-a-time-mail</button>
+
+        <div id="section-order-email">
+            <fieldset class="add-more-group">
+
+                <div class="name-to-control-cntnr">
+                    <div class="label">To:</div>
+                    <input class="text-input" name="items[0].name-to" required></input>
+                </div>
+
+                <div class="month-control-cntnr">
+                    <select class="selector"></select>
+                </div>
+
+                <div class="day-control-cntnr">
+                    <select class="selector"></select>
+                </div>
+
+
+                <div class="message-with-countdown-cntnr">
+                    <textarea class="" maxlength="250"></textarea>
+                    <div><span>250</span> Characters Remaining</div>
+                </div>
+
+            </fieldset>
+
+        </div>
+        <button id="add-more-at-a-time-email">add-more-at-a-time-email</button>
+        <button class="add-to-bag">add-to-bag</button>
+
+        <script>
+            var VS = VS || {};
+            VS.data = VS.data || {};
+
+            VS.data.monthDays = [[25, 31], [1, 30], [1, 31]];
+
+            VS.data.dollarAmountsMail = [25, 50, 100, 250, 500];
+
+            VS.data.designChoicesMail = [
+                {
+                    "title": "First",
+                    "value": "AAA",
+                    "img_thumb_url": "images/blue-yellow.jpg",
+                    "img_full_url": "images/blue-yellow.jpg"
+                },
+                {
+                    "title": "Second",
+                    "value": "BBB",
+                    "img_thumb_url": "images/brown_white.jpg",
+                    "img_full_url": "images/brown_white.jpg"
+                },
+                {
+                    "title": "Second",
+                    "value": "CCC",
+                    "img_thumb_url": "images/yellow_fish.jpg",
+                    "img_full_url": "images/yellow_fish.jpg"
+                },
+                {
+                    "title": "Second",
+                    "value": "DDD",
+                    "img_thumb_url": "images/orange_white.jpg",
+                    "img_full_url": "images/orange_white.jpg"
+                },
+                {
+                    "title": "Second",
+                    "value": "EEE",
+                    "img_thumb_url": "images/pink_fish.jpg",
+                    "img_full_url": "images/pink_fish.jpg"
+                },
+                {
+                    "title": "Second",
+                    "value": "FFF",
+                    "img_thumb_url": "images/tall_fish.jpg",
+                    "img_full_url": "images/tall_fish.jpg"
+                },
+
+            ];
+        </script>
+
+
+    </body>
+</html>
