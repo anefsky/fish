@@ -1,38 +1,41 @@
 <html>
-    
+
     <head>
         <title>Giftcard</title>
-        
+
         <link rel="stylesheet" type="text/css" href="css/site.css">
-        
+
         <script src="js/controls.js"></script>
         <script src="js/giftcard.js"></script>
 
 
     </head>
     <body>
-        <img id="main-page-img">
+        <div id="heading-display">
+            <img id="main-page-img">
+        </div>
+
         <div id="errors-on-page-notice" hidden>See errors below</div>
         <div id="section-order-mail">
 
             <fieldset class="add-more-group">
 
-                <div class="design-control-cntnr">
+                <div class="design-control-cntnr control">
                     <img class="main-image-display">
                     <span class="design-options"></span>
                 </div>
 
 
-                <div class="amt-control-cntnr">
+                <div class="amt-control-cntnr control">
                     <select class="amt-control"></select>
                 </div>
 
-                <div class="name-to-control-cntnr">
+                <div class="name-to-control-cntnr control">
                     <div class="label">To (optional):</div>
                     <input class="text-input" name="items[0].name-to" ></input>
                 </div>
 
-                <div class="name-from-control-cntnr">
+                <div class="name-from-control-cntnr control">
                     <div class="label">From (optional):</div>
                     <input class="text-input" name="items[0].name-from" ></input>
                 </div>
@@ -116,7 +119,6 @@
                     "img_thumb_url": "images/tall_fish.jpg",
                     "img_full_url": "images/tall_fish.jpg"
                 },
-
             ];
         </script>
 

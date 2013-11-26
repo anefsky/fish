@@ -1,11 +1,22 @@
+body {
+    width: 275px;
+}
+
+#heading-display {
+    width: 100%;
+    text-align: center;
+}
+
 #main-page-img {
-    height: 200px;
+    width: 100%;
+   margin-left: auto;
+    margin-right: auto;
 }
 
 .main-image-display {
     height: 100px;
     float: left;
-    clear: both;
+    /*clear: both;*/
 }
 
 input[type="radio"]{
@@ -40,5 +51,17 @@ input[type="radio"]:checked + label
 }
 
 .error {
-    background-color: mistyrose;
+    background-color: red;
+}
+
+.control {
+    clear: both;
+}
+
+#section-order-mail {
+    background-color: yellow;
+}
+
+#section-order-email {
+    background-color: orange;
 }
