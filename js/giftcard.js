@@ -78,7 +78,8 @@ Giftcard.App = (function() { // Singleton
                 var moduleCollection = new Giftcard.ModuleCollection(elModuleCollection,
                         Giftcard.App.getInstance().getCfgParam("max_orders_per_type"));
                 Giftcard.App.getInstance().setProperty(params.collection_name, moduleCollection);
-                var elExistingModule = elModuleCollection.getElementsByClassName("add-more-group")[0];
+      //          var elExistingModule = elModuleCollection.getElementsByClassName("add-more-group")[0];
+                var elExistingModule = elModuleCollection.getElementsByClassName("single-order")[0];
                 var existingModule = new Giftcard.OrderModule(elExistingModule, formType, _getNextItemNum());
                 moduleCollection.setMasterModule(existingModule);
                 existingModule.brand();

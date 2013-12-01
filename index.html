@@ -18,86 +18,91 @@
 
         <div id="errors-on-page-notice" class="hidden">Please fix highlighted errors below</div>
 
-        <div id="section-order-mail">
+        <div id="section-order-mail" class="order-collection">
+            <div class="single-order">
 
-            <fieldset class="add-more-group">
+                <fieldset class="add-more-group">
+ 
+                    <div class="design-control-cntnr control">
+                        <img class="main-image-display">
+                        <span class="design-options"></span>
+                    </div>
 
-                <div class="design-control-cntnr control">
-                    <img class="main-image-display">
-                    <span class="design-options"></span>
-                </div>
+                    <div class="amt-control-cntnr control">
+                        <div class="label">Amount:</div>
+                        <select class="amt-control" required name="items[XXX].amount"></select>
+                    </div>
 
-                <div class="amt-control-cntnr control">
-                    <select class="amt-control" required name="items[XXX].amount"></select>
-                </div>
+                    <div class="name-to-control-cntnr control">
+                        <div class="label">To (optional):</div>
+                        <input class="text-input" name="items[XXX].name-to" ></input>
+                    </div>
 
-                <div class="name-to-control-cntnr control">
-                    <div class="label">To (optional):</div>
-                    <input class="text-input" name="items[XXX].name-to" ></input>
-                </div>
+                    <div class="name-from-control-cntnr control">
+                        <div class="label">From (optional):</div>
+                        <input class="text-input" name="items[XXX].name-from" ></input>
+                    </div>
 
-                <div class="name-from-control-cntnr control">
-                    <div class="label">From (optional):</div>
-                    <input class="text-input" name="items[XXX].name-from" ></input>
-                </div>
-
-            </fieldset>
-
+                </fieldset>
+            </div>
         </div>
 
         <button id="add-more-at-a-time-mail">add-more-at-a-time-fish</button>
 
-        <div id="section-order-email">
-            <fieldset class="add-more-group">
-
-                <div class="design-control-cntnr control">
-                    <img class="main-image-display">
-                    <span class="design-options"></span>
-                </div>
-
-                <div class="amt-control-cntnr control">
-                    <select class="amt-control" required name="items[XXX].amount"></select>
-                </div>
-
-                <div class="name-to-control-cntnr control">
-                    <div class="label">To:</div>
-                    <input class="text-input" name="items[XXX].name-to" required></input>
-                </div>
-
-                <div class="name-from-control-cntnr control">
-                    <div class="label">From:</div>
-                    <input class="text-input" name="items[XXX].name-from" required></input>
-                </div>
-
-
-                <div class="email-to-control-cntnr control">
-                    <div class="label">Recipient's Email Address:</div>
-                    <input class="text-input" name="items[XXX].email-to" required></input>
-                </div>
-
-                <div class="email-confirm-control-cntnr control">
-                    <div class="label">Confirm Email Address:</div>
-                    <input class="text-input" name="items[XXX].email-cfm" required></input>
-                </div>
-
-                <div class="date_controls">
-                    <div class="label">Date to Send:</div>
-                    <div class="month-control-cntnr control">
-                        <select class="selector" name="items[XXX].month"></select>
+        <div id="section-order-email" class="order-collection">
+            <div class="single-order">
+                <fieldset class="add-more-group">
+ 
+                    <div class="design-control-cntnr control">
+                        <img class="main-image-display">
+                        <span class="design-options"></span>
                     </div>
-                    <div class="day-control-cntnr">
-                        <select class="selector" name="items[XXX].day"></select>
+
+                    <div class="amt-control-cntnr control">
+                        <div class="label">Amount:</div>
+                        <select class="amt-control" required name="items[XXX].amount"></select>
                     </div>
-                </div>
 
-                <div class="message-with-countdown-cntnr control">
-                    <label>Message (Optional):</label>
-                    <textarea class="" maxlength="250"  name="items[XXX].msg"></textarea>
-                    <div><span>250</span> Characters Remaining</div>
-                </div>
+                    <div class="name-to-control-cntnr control">
+                        <div class="label">To:</div>
+                        <input class="text-input" name="items[XXX].name-to" required></input>
+                    </div>
 
-            </fieldset>
+                    <div class="name-from-control-cntnr control">
+                        <div class="label">From:</div>
+                        <input class="text-input" name="items[XXX].name-from" required></input>
+                    </div>
 
+
+                    <div class="email-to-control-cntnr control">
+                        <div class="label">Recipient's Email Address:</div>
+                        <input class="text-input" name="items[XXX].email-to" required></input>
+                    </div>
+
+                    <div class="email-confirm-control-cntnr control">
+                        <div class="label">Confirm Email Address:</div>
+                        <input class="text-input" name="items[XXX].email-cfm" required></input>
+                    </div>
+
+                    <div class="date_controls">
+                        <div class="label">Date to Send:</div>
+                        <div class="month-control-cntnr control">
+                            <select class="selector" name="items[XXX].month"></select>
+                        </div>
+                        <div class="day-control-cntnr">
+                            <select class="selector" name="items[XXX].day"></select>
+                        </div>
+                    </div>
+
+                    <div class="message-with-countdown-cntnr control">
+                        <label>Message (Optional):</label>
+                        <textarea class="" maxlength="250"  name="items[XXX].msg"></textarea>
+                        <div><span>250</span> Characters Remaining</div>
+                    </div>
+
+                </fieldset>
+
+            </div>
         </div>
         <button id="add-more-at-a-time-email">add-more-at-a-time-birds</button>
         <button class="add-to-bag">add-to-bag</button>
@@ -106,10 +111,10 @@
             var AJN = AJN || {};
             AJN.data = AJN.data || {};
 
-            AJN.data.monthDays = [[25, 30], [1, 31], [1, 31]];
+            AJN.data.monthDays = [[25, 31], [1, 31], [1, 28]];
 
             AJN.data.dollarAmountsMail = [25, 50, 100, 250, 500];
-            
+
             AJN.data.dollarAmountsEmail = [50, 100, 500, 1000];
 
             AJN.data.designChoicesMail = [
