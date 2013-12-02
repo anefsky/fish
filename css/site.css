@@ -1,4 +1,5 @@
 body {
+    /*background-color: #C3B274;*/
 }
 
 #heading-display {
@@ -33,9 +34,9 @@ input[type="radio"] + label
 
 input[type="radio"]:checked + label
 {
-    -webkit-box-shadow:inset 0px 0px 0px 3px black;
-    -moz-box-shadow:inset 0px 0px 0px 3px black;
-    box-shadow:inset 0px 0px 0px 3px black;
+    -webkit-box-shadow:inset 0px 0px 0px 5px black;
+    -moz-box-shadow:inset 0px 0px 0px 5px black;
+    box-shadow:inset 0px 0px 0px 5px black;
 
 }
 
@@ -58,12 +59,12 @@ input[type="radio"]:checked + label
     clear: both;
 }
 
-#section-order-mail {
-    /*background-color: yellow;*/
+#section-order-mail fieldset{
+    background-color: #EAB06E;
 }
 
-#section-order-email {
-    /*background-color: orange;*/
+#section-order-email fieldset{
+    background-color: #E89C84;
 }
 
 button {
@@ -100,7 +101,3 @@ div.single-order {
     float: left;
 }
 
-fieldset {
-    background-color: tan;
-    
-}
